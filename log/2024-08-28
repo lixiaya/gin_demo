@@ -1,0 +1,48 @@
+{"level":"info","time":"2024-08-28 16:08:52","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 16:08:52","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 16:08:52","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 16:08:52","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-28 16:10:22","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 16:10:22","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 16:10:22","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 16:10:22","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-28 16:27:33","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 16:27:33","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 16:27:33","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 16:27:33","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-28 16:30:14","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 16:30:14","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 16:30:14","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 16:30:14","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-28 16:34:34","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 16:34:34","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 16:34:34","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 16:34:34","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-28 16:47:34","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 16:47:34","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 16:47:34","msg":"connect database success(连接数据库成功)"}
+{"level":"error","time":"2024-08-28 16:47:34","msg":"自动迁移失败TAT: Error 1366 (HY000): Incorrect integer value: '' for column 'id' at row 1\n"}
+{"level":"info","time":"2024-08-28 16:48:10","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 16:48:10","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 16:48:10","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 16:48:10","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-28 22:11:28","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 22:11:28","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 22:11:28","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 22:11:28","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-28 22:13:14","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 22:13:14","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 22:13:14","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 22:13:14","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-28 22:21:48","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 22:21:48","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 22:21:48","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 22:21:48","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-28 23:21:46","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 23:21:46","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 23:21:46","msg":"connect database success(连接数据库成功)"}
+{"level":"error","time":"2024-08-28 23:21:46","msg":"自动迁移失败TAT: Error 1075 (42000): Incorrect table definition; there can be only one auto column and it must be defined as a key\n"}
+{"level":"info","time":"2024-08-28 23:22:11","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-28 23:22:11","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-28 23:22:11","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-28 23:22:11","msg":"自动迁移成功或数据库存在对应表"}

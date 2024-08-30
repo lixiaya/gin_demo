@@ -1,0 +1,115 @@
+{"level":"info","time":"2024-08-30 14:18:37","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:18:37","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:18:37","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:18:37","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:18:37","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 14:20:40","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:20:40","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:20:40","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:20:40","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:20:40","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 14:21:03","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:21:03","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:21:03","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:21:03","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:21:03","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 14:24:07","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:24:07","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:24:07","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:24:07","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:24:07","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 14:24:12","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:24:12","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:24:12","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:24:12","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:24:12","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 14:24:38","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:24:38","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:24:38","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:24:38","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:24:38","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 14:24:57","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:24:57","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:24:57","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:24:57","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:24:57","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 14:34:52","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:34:52","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:34:52","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:34:52","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:34:52","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 14:35:11","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:35:11","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:35:11","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:35:11","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:35:11","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 14:54:59","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 14:54:59","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 14:54:59","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 14:54:59","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 14:54:59","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 15:01:27","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 15:01:27","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 15:01:27","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 15:01:27","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 15:01:27","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 15:09:47","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 15:09:47","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 15:09:47","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 15:09:47","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 15:09:47","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:01:00","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:01:00","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:01:00","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:01:00","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:01:00","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:08:27","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:08:27","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:08:27","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:08:27","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:08:27","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:11:15","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:11:15","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:11:15","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:11:15","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:11:15","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:19:28","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:19:28","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:19:28","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:19:28","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:19:28","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:21:03","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:21:03","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:21:03","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:21:03","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:21:03","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:21:44","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:21:44","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:21:44","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:21:44","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:21:44","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:24:42","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:24:42","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:24:43","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:24:43","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:24:43","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:25:11","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:25:11","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:25:11","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:25:11","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:25:11","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:25:14","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:25:14","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:25:14","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:25:14","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:25:14","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:27:27","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:27:27","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:27:27","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:27:27","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:27:27","msg":"自动迁移成功或数据库存在对应表"}
+{"level":"info","time":"2024-08-30 16:31:26","msg":"----------start-----------"}
+{"level":"info","time":"2024-08-30 16:31:26","msg":"初始化viper Success"}
+{"level":"info","time":"2024-08-30 16:31:26","msg":"redis connect success"}
+{"level":"info","time":"2024-08-30 16:31:26","msg":"connect database success(连接数据库成功)"}
+{"level":"info","time":"2024-08-30 16:31:26","msg":"自动迁移成功或数据库存在对应表"}

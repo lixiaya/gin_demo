@@ -1,0 +1,20 @@
+# web服务器
+server:
+  port: 1357
+
+# 跨域配置
+cors:
+
+#数据库配置
+db:
+  dsn: "root:qwerty@tcp(127.0.0.1:3306)/gin_demo?charset=utf8mb4&parseTime=True&loc=Local"
+  maxIdleConn: 10 #最多空闲连接数
+  maxOpenConn: 10 #最多打开连接数
+
+logs:
+  path: 'log'
+  level: debug   # debug、info、warn、error,级别越高记录的日志越少
+  max_size: 1   # MB
+  max_age: 7   # 保留天数
+  max_backups: 7   # 最大备份数
+  compress: true   # 是否压缩,减少磁盘空间
