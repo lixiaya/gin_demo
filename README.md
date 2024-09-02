@@ -14,4 +14,3 @@ gin_demo 基于gin等开源项目，进行简单的web api开发
 - [lumberjack](https://github.com/natefinch/lumberjack) 日志切割 
 - [base64Captcha](https://github.com/mojocn/base64Captcha) 对密码进行加密解密
 - [email](https://github.com/jordan-wright/email) 邮箱工具    
-
