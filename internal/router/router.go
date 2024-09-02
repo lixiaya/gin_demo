@@ -31,6 +31,7 @@ func InitRouter() {
 		auth.GET("/userallinfo", userApi.GetUserAllInfo)
 		auth.GET("/userinfo/:email", userApi.GetUserInfo)
 		auth.PUT("/update-userinfo", userApi.UpdateUserInfo)
+		auth.DELETE("/delete-userinfo/:email", userApi.DeleteUserInfo)
 	}
 
 	err := r.Run(fmt.Sprintf(":%v", viper.GetString("server.port")))
