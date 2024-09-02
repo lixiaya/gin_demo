@@ -29,6 +29,8 @@ func InitRouter() {
 	auth := r.Group("/api/v1/auth").Use(middleware.JwtMiddleware())
 	{
 		auth.GET("/userallinfo", userApi.GetUserAllInfo)
+		auth.GET("/userinfo/:email", userApi.GetUserInfo)
+		auth.PUT("/update-userinfo", userApi.UpdateUserInfo)
 	}
 
 	err := r.Run(fmt.Sprintf(":%v", viper.GetString("server.port")))

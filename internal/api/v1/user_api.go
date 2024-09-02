@@ -18,7 +18,7 @@ import (
 type UserApi struct {
 }
 
-// 登录成功返回数据
+// LoginSuccessData 登录成功返回数据
 type LoginSuccessData struct {
 	Uid   uint   `json:"uid"`
 	Token string `json:"token"`
@@ -30,6 +30,7 @@ type capCode struct {
 	Code string `json:"code"`
 }
 
+// Login 登录
 func (u *UserApi) Login(ctx *gin.Context) {
 	var l model.User
 	err := ctx.ShouldBind(&l)
@@ -67,10 +68,10 @@ func (u *UserApi) Login(ctx *gin.Context) {
 	util.ResponseOk(ctx, http.StatusOK, "login success", data)
 }
 
+// Register 注册
 func (u *UserApi) Register(ctx *gin.Context) {
 	var user dto.UserRegister
-	err := ctx.ShouldBind(&user)
-	if err != nil {
+	if err := ctx.ShouldBind(&user); err != nil {
 		util.ResponseErr(ctx, http.StatusBadRequest, err.Error())
 	}
 	//检查email是否重复
@@ -109,15 +110,13 @@ func (u *UserApi) Register(ctx *gin.Context) {
 	util.ResponseOk(ctx, http.StatusOK, "注册success", newUser)
 }
 
-/*
-*
-发送验证码请求
-*/
+// GenerateCaptcha 发送验证码请求
 func (u *UserApi) GenerateCaptcha(ctx *gin.Context) {
 	var user dto.UserRegister
 	err := ctx.ShouldBindJSON(&user)
 	if err != nil {
 		fmt.Println("失败")
+		return
 	}
 
 	driver := base64Captcha.NewDriverDigit(80, 240, 4, 0.7, 80)
@@ -146,10 +145,11 @@ func (u *UserApi) GenerateCaptcha(ctx *gin.Context) {
 
 }
 
-func (u *UserApi) GetUserAllInfo(c *gin.Context) {
+// GetUserAllInfo 获取所有用户信息
+func (u *UserApi) GetUserAllInfo(ctx *gin.Context) {
 	//从上下文获取用户id
 	var l []model.User
-	uid := c.MustGet("uid")
+	uid := ctx.MustGet("uid")
 	fmt.Printf("uid:%v ", uid)
 	//查询所有用户信息
 	global.DB.Find(&l)
@@ -159,5 +159,42 @@ func (u *UserApi) GetUserAllInfo(c *gin.Context) {
 	}
 	//记录那位用户访问
 	global.Logger.Info(fmt.Sprintf("UID: %v 查询了所有用户信息", uid))
-	util.ResponseOk(c, http.StatusOK, "获取所有用户信息成功", newUsers)
+	util.ResponseOk(ctx, http.StatusOK, "获取所有用户信息成功", newUsers)
+}
+
+// 查询单个用户信息
+func (u *UserApi) GetUserInfo(ctx *gin.Context) {
+	//通过email 查询用户信息
+	var l model.User
+	email := ctx.Param("email")
+	fmt.Println("email:", email)
+	err := global.DB.Where("email = ?", email).First(&l).Error
+	if err != nil {
+		util.ResponseErr(ctx, http.StatusBadRequest, "用户不存在")
+		return
+	}
+	util.ResponseOk(ctx, http.StatusOK, "查询用户信息成功", l)
+}
+
+// 修改用户信息
+func (u *UserApi) UpdateUserInfo(ctx *gin.Context) {
+	var l model.User
+	err := ctx.ShouldBindJSON(&l)
+	if err != nil {
+		util.ResponseErr(ctx, http.StatusBadRequest, err.Error)
+		return
+	}
+	newl := model.User{
+		//Email:     l.Email,
+		Nickname:  l.Nickname,
+		Gender:    l.Gender,
+		UpdatedAt: time.Now(),
+	}
+	result := global.DB.Model(&l).Where("email=?", l.Email).Updates(newl)
+	fmt.Println(newl)
+	if result.Error != nil {
+		util.ResponseErr(ctx, http.StatusBadRequest, "更新用户信息失败")
+		return
+	}
+	util.ResponseOk(ctx, http.StatusOK, "更新用户信息成功", l)
 }
