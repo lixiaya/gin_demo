@@ -11,10 +11,17 @@ import (
 	"github.com/mojocn/base64Captcha"
 	"gorm.io/gorm"
 	"net/http"
+	"strconv"
 	"time"
 )
 
 type UserApi struct {
+}
+
+// 登录成功返回数据
+type LoginSuccessData struct {
+	Uid   uint   `json:"uid"`
+	Token string `json:"token"`
 }
 
 type capCode struct {
@@ -26,29 +33,38 @@ type capCode struct {
 func (u *UserApi) Login(ctx *gin.Context) {
 	var l model.User
 	err := ctx.ShouldBind(&l)
-	//fmt.Println(l)
 	if err != nil {
 		util.ResponseErr(ctx, http.StatusBadRequest, err.Error())
 		return
 	}
 	//查询数据是否存在email，存在则验证密码，不存在则返回失败
 	loginUser := dto.UserLogin{
+		Uid:      l.UID,
 		Email:    l.Email,
 		Password: l.Password,
 	}
-	fmt.Println(loginUser)
 	if global.DB.Where("email = ?", loginUser.Email).First(&l) == nil {
 		util.ResponseErr(ctx, http.StatusBadRequest, "email已存在")
 	}
+	fmt.Println(l)
 	//验证密码
 	match := util.BcryptVerify(l.Password, loginUser.Password)
-
 	if !match {
 		util.ResponseErr(ctx, http.StatusBadRequest, "密码错误")
 		return
 	}
-
-	util.ResponseOk(ctx, http.StatusOK, "login success", "")
+	//生成jwt——token ,保存到redis，过期时间为三天
+	generateJwt, err := util.GenerateJwt(l.UID)
+	if err != nil {
+		util.ResponseErr(ctx, http.StatusInternalServerError, "生成token失败")
+		return
+	}
+	data := LoginSuccessData{
+		Uid:   l.UID,
+		Token: generateJwt,
+	}
+	global.Rdb.Set(context.Background(), strconv.Itoa(int(l.UID)), generateJwt, 3*24*time.Hour)
+	util.ResponseOk(ctx, http.StatusOK, "login success", data)
 }
 
 func (u *UserApi) Register(ctx *gin.Context) {
@@ -128,4 +144,20 @@ func (u *UserApi) GenerateCaptcha(ctx *gin.Context) {
 	}
 	util.ResponseOk(ctx, http.StatusOK, "生成验证码成功", newCode)
 
+}
+
+func (u *UserApi) GetUserAllInfo(c *gin.Context) {
+	//从上下文获取用户id
+	var l []model.User
+	uid := c.MustGet("uid")
+	fmt.Printf("uid:%v ", uid)
+	//查询所有用户信息
+	global.DB.Find(&l)
+	newUsers := make([]model.User, 0)
+	for _, user := range l {
+		newUsers = append(newUsers, user)
+	}
+	//记录那位用户访问
+	global.Logger.Info(fmt.Sprintf("UID: %v 查询了所有用户信息", uid))
+	util.ResponseOk(c, http.StatusOK, "获取所有用户信息成功", newUsers)
 }

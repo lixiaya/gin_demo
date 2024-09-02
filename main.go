@@ -25,7 +25,11 @@ func main() {
 	//global.Rdb.Set(context.Background(), "1", "21", 5*time.Minute)
 	//数据库初始化连接
 	global.DB = config.InitMysql()
+	//jwt, err := util.GenerateJwt(1)
+	//if err != nil {
+	//	return
+	//}
+	//fmt.Println(jwt)
 	//gin路由初始化
 	router.InitRouter()
-
 }

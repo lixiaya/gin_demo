@@ -20,12 +20,15 @@ func InitRouter() {
 	//r.Use()
 	r.Use(middleware.ZapMiddleware(global.Logger))
 	userApi := api.UserApi{}
-	v1 := r.Group("/api/v1")
+	public := r.Group("/api/v1")
 	{
-
-		v1.POST("/generate-captcha", userApi.GenerateCaptcha)
-		v1.GET("/login", userApi.Login)
-		v1.POST("/register", userApi.Register)
+		public.POST("/generate-captcha", userApi.GenerateCaptcha)
+		public.POST("/login", userApi.Login)
+		public.POST("/register", userApi.Register)
+	}
+	auth := r.Group("/api/v1/auth").Use(middleware.JwtMiddleware())
+	{
+		auth.GET("/userallinfo", userApi.GetUserAllInfo)
 	}
 
 	err := r.Run(fmt.Sprintf(":%v", viper.GetString("server.port")))

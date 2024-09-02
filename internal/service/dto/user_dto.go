@@ -1,6 +1,7 @@
 package dto
 
 type UserLogin struct {
+	Uid      uint   `json:"uid"`
 	Email    string `json:"email"`
 	Password string `json:"password"`
 }
