@@ -176,25 +176,33 @@ func (u *UserApi) GetUserInfo(ctx *gin.Context) {
 	util.ResponseOk(ctx, http.StatusOK, "查询用户信息成功", l)
 }
 
-// 修改用户信息
+// UpdateUserInfo 修改用户信息
+// 目前字段较少 只能修改昵称和性别
 func (u *UserApi) UpdateUserInfo(ctx *gin.Context) {
 	var l model.User
 	err := ctx.ShouldBindJSON(&l)
+	fmt.Printf("l:", l)
 	if err != nil {
 		util.ResponseErr(ctx, http.StatusBadRequest, err.Error)
 		return
 	}
-	newl := model.User{
-		//Email:     l.Email,
+	type updataUser struct {
+		Nickname  string
+		Gender    string
+		UpdatedAt time.Time
+	}
+	newl := updataUser{
 		Nickname:  l.Nickname,
 		Gender:    l.Gender,
 		UpdatedAt: time.Now(),
 	}
-	result := global.DB.Model(&l).Where("email=?", l.Email).Updates(newl)
-	fmt.Println(newl)
-	if result.Error != nil {
+
+	resultErr := global.DB.Model(&l).Where("email=?", l.Email).Updates(newl).Error
+	fmt.Println(l.Email)
+	fmt.Println(resultErr)
+	if resultErr != nil {
 		util.ResponseErr(ctx, http.StatusBadRequest, "更新用户信息失败")
 		return
 	}
-	util.ResponseOk(ctx, http.StatusOK, "更新用户信息成功", l)
+	util.ResponseOk(ctx, http.StatusOK, "更新用户信息成功", newl)
 }
