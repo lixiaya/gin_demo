@@ -2,9 +2,12 @@
 server:
   port: 1357
 
-# 跨域配置
-cors:
-
+#email
+  email:
+    address: "example@example.com"  # 替换为自己的邮箱
+    password: "password"  # 替换为自己的邮箱授权码
+    subject: "注册验证码："  # 邮件主题，可以自定义
+    addrhost: "smtp.yeah.net"  # 发件人邮箱，smtp服务器地址
 #数据库配置
 db:
   dsn: "root:qwerty@tcp(127.0.0.1:3306)/gin_demo?charset=utf8mb4&parseTime=True&loc=Local"
