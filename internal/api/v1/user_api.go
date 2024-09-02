@@ -162,7 +162,7 @@ func (u *UserApi) GetUserAllInfo(ctx *gin.Context) {
 	util.ResponseOk(ctx, http.StatusOK, "获取所有用户信息成功", newUsers)
 }
 
-// 查询单个用户信息
+// GetUserInfo 查询单个用户信息
 func (u *UserApi) GetUserInfo(ctx *gin.Context) {
 	//通过email 查询用户信息
 	var l model.User
@@ -205,4 +205,17 @@ func (u *UserApi) UpdateUserInfo(ctx *gin.Context) {
 		return
 	}
 	util.ResponseOk(ctx, http.StatusOK, "更新用户信息成功", newl)
+}
+
+// DeleteUserInfo 删除用户信息
+func (u *UserApi) DeleteUserInfo(ctx *gin.Context) {
+	var email string
+	email = ctx.Param("email")
+	resultErr := global.DB.Where("email=?", email).Delete(&model.User{}).Error
+	if resultErr != nil {
+		util.ResponseErr(ctx, http.StatusBadRequest, "删除用户信息失败")
+		return
+	}
+	util.ResponseOk(ctx, http.StatusOK, "删除用户信息成功", email)
+
 }
